@@ -1,10 +1,6 @@
 library(fields)
 library(magicaxis)
-library(grDevices)
 library(minpack.lm)
-#source('mcmc_func.R')
-#source('periodoframe.R')
-#source('periodograms.R')
 source('prepare_data.R',local=TRUE)
 ########################################
 #####part I: making MP
