@@ -13,8 +13,10 @@ The main output of the BFP function is the logarithmic Bayes factor (logBF) for 
 
 The usage of the functions of MLP and MP in periodoframe.R is similar, the user is refered to "make_periodoframe.R" and "MP.R" for examples. 
 
+
 2. Test data
 The test data is put in the data/ directory. And the results are put in the results/ directory. One can change these directories. In the data/ directory, "...calibration.dat" files are calibration data, "..._TERRA_HARPS.dat" are TERRA-reduced HARPS data including JD-2400000, RV, eRV, BIS, FWHM and S-index from left to right columns. "..._TERRA_XAP_dRVs.dat" are differential RVs derived from XAP aperture data sets. In each file, the first column is the time, and the other columns are XAPj-i where j={2,3,...,X} and i=j-1.  
+
 
 3. Content of code files
 The functions needed to make PeriodoFrame are put in periodoframe.R while the functions used to make other periodograms are put into periodogrames.R . In specific, the MLP(...) and BFP(...) functions in periodoframe.R are used to create MLP and BFP respectively. The MP(...) function is used to make the moving periodogram. 
