@@ -10,7 +10,7 @@ bf <- BFP(t,y,dy,Nma=Nma,NI=NI,Indices=Indices,ofac=ofac,opt.type=opt.type,model
 
 where t, y and dy are the times, y values and the corresponding errors. Nma and NI are the numbers of moving average components and indices which are given by "Indices". "ofac" is the over sampling factor, and opt.type can be "nl" or "sl", and is the method used to optimize parameters. "sl" is suggested because it is more efficient and is as reliable as "nl". "model.type" is a parameter to specify whether to compare models. If model.type='auto', model comparison is done using the BFP to select the optimal noise model. If model.type='man', BFP will use Nma and NI manually provided by the user. "fmax" is the maximum frequency for frequency sampling, and "tol" is the tolorence or prevision required to optimize parameters (or maximize the likelihood) numerically. 
 
-The main output of the BFP function is the logarithmic Bayes factor (logBF) for a sample of periods (P). Then the user can make a simple BFP using plot(P,logBF,log='x')
+The main output of the BFP function is the logarithmic Bayes factor (logBF) for a sample of periods (P). Then the user can make a simple BFP using plot(BFP$P,BFP$logBF,log='x',type='l') . 
 
 The usage of the functions of MLP and MP in periodoframe.R is similar, the user is refered to "make_periodoframe.R" and "MP.R" for examples. 
 
@@ -23,3 +23,15 @@ The test data is put in the "data/" directory. And the results are put in the "r
 The functions needed to make PeriodoFrame are put in periodoframe.R while the functions used to make other periodograms are put into periodogrames.R . In specific, the MLP(...) and BFP(...) functions in periodoframe.R are used to create MLP and BFP respectively. The MP(...) function is used to make the moving periodogram. 
 
 The other .R files are just examples for the usage of PeriodoFrame. The "make_periodoframe.R" file is used to make the BFP and MLP. The "MP.R" file is to make the moving periodogram. Both files call "prepare_data.R" which is to set parameters and to load the data. The user is refered to the upcoming paper titled "PeriodoFrame: Disentangling periodic singals from correlated noise in a periodogram framework" for more details.  
+
+To quickly produce a periodogram, you just start R by type "R" on the command line, and then run the following command in the R console:
+
+source('make_periodogram.R')
+
+or run the following command on the command line directly: 
+
+Rscript make_periodogram.R
+
+If the user wants to change the parameters of BFP, he/she can change them in the file "prepare_data.R", and then run make_periodogram.R again. 
+
+The usage of MP.R is similar to make_periodogram.R. 
