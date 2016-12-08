@@ -32,6 +32,6 @@ or run the following command on the command line directly:
 
 Rscript make_periodogram.R
 
-If the user wants to change the parameters of BFP, he/she can change them in the file "prepare_data.R", and then run make_periodogram.R again. 
+If the user wants to change the parameters of periodograms, he/she can change them in the file "prepare_data.R", and then run make_periodogram.R again. 
 
 The usage of MP.R is similar to make_periodogram.R. 
