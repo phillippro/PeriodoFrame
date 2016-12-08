@@ -3,10 +3,10 @@ A framework of periodograms to disentangle periodic signals from correlated nois
 
 1.Installation and usage
 
-The user just download the code and put it in a directory. Since these codes are wirtten in R, R and relevant packages are required to run the code. The "minpack.lm" R package is required to calculate the BFP. The "fields" and "magicaxis" packages are optional, and are needed to make figures. Then the user can write his own code referring to the examples provided by "make_periodoframe.R", "MP.R" and "prepare_data.R". The user can also use the functions directly to make BFP and MLP. 
+The user can download the code and put it in a directory. Since these codes were wirtten in R, R and relevant packages are required to run the code. The "minpack.lm" R package is required to calculate the BFP. The "fields" and "magicaxis" packages are optional, and are needed to make figures. Then the user can write his own code referring to the examples provided by "make_periodoframe.R", "MP.R" and "prepare_data.R". The user can also use the functions directly to make BFP and MLP. 
 For example, the BFP can be made using the following function:
 
-bf <- BFP(t,y,dy,Nma=Nma,NI=NI,Indices=Indices,ofac=ofac,opt.type=opt.type,model.type=model.type,fmax=fmax,tol=tol)
+BFP(t,y,dy,Nma=Nma,NI=NI,Indices=Indices,ofac=ofac,opt.type=opt.type,model.type=model.type,fmax=fmax,tol=tol)
 
 where t, y and dy are the times, y values and the corresponding errors. Nma and NI are the numbers of moving average components and indices which are given by "Indices". "ofac" is the over sampling factor, and opt.type can be "nl" or "sl", and is the method used to optimize parameters. "sl" is suggested because it is more efficient and is as reliable as "nl". "model.type" is a parameter to specify whether to compare models. If model.type='auto', model comparison is done using the BFP to select the optimal noise model. If model.type='man', BFP will use Nma and NI manually provided by the user. "fmax" is the maximum frequency for frequency sampling, and "tol" is the tolorence or prevision required to optimize parameters (or maximize the likelihood) numerically. 
 
