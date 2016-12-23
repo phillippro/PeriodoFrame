@@ -4,7 +4,7 @@
 ### web app 
 
 The shiny app of PeriodoFrame is available [here](https://phillippro.shinyapps.io/shiny/).
-If you use PeriodoFrame in your work, please cite **"Feng F., Tuomi M., Jones H. R. A., 2017, PERIODOFRAME: Disentangling periodic signal from correlated noise in a periodogram framework, to be submitted"**
+If you use PeriodoFrame in your work, please cite **"Feng F., Tuomi M., Jones H. R. A., 2017, PeriodoFrame: disentangle periodic signals from correlated noise in a periodogram framework, to be submitted"**
 
 ### Installation and usage
 
