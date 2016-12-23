@@ -1,11 +1,12 @@
 # PeriodoFrame
 ## A framework of periodograms to disentangle periodic signals from correlated noise
 
-- web app 
+### web app 
+
 The web app version of PeriodoFrame is available here: https://phillippro.shinyapps.io/shiny/
 If you use PeriodoFrame in your work, please cite **"Feng F., Tuomi M., Jones H. R. A., 2017, PERIODOFRAME: Disentangling periodic signal from correlated noise in a periodogram framework, to be submitted"**
 
-- Installation and usage
+### Installation and usage
 
 The user can download the code and put it in a directory. Since these codes were wirtten in R, R and relevant packages are required to run the code. The "minpack.lm" R package is required to calculate the BFP. The "fields" and "magicaxis" packages are optional, and are needed to make figures. Then the user can write his own code referring to the examples provided by "make_periodoframe.R", "MP.R" and "prepare_data.R". The user can also use the functions directly to make BFP and MLP. 
 For example, the BFP can be made using the following function:
@@ -18,11 +19,11 @@ The main output of the BFP function is the logarithmic Bayes factor (logBF) for 
 
 The usage of the functions of MLP and MP in periodoframe.R is similar, the user is refered to "make_periodoframe.R" and "MP.R" for examples. 
 
-- data
+### data
 
 The test data is put in the "data/" directory. And the results are put in the "results/" directory. In the "data/" directory, "...calibration.dat" files are calibration data, "..._TERRA_HARPS.dat" are TERRA-reduced HARPS data including JD-2400000, RV, eRV, BIS, FWHM and S-index from left to right columns. "..._TERRA_XAP_dRVs.dat" are differential RVs derived from XAP aperture data sets. In each file, the first column is the time, and the other columns are XAPj-i where j={2,3,...,X} and i=j-1.  
 
-- example code
+### example code
 
 The functions needed to make PeriodoFrame are put in periodoframe.R while the functions used to make other periodograms are put into periodogrames.R . In specific, the MLP(...) and BFP(...) functions in periodoframe.R are used to create MLP and BFP respectively. The MP(...) function is used to make the moving periodogram. 
 
